@@ -1,0 +1,42 @@
+Q U E S T I O N S 
+
+CLIENT 
+
+
+SERVER
+- how should i structure my tests?
+    - tests should be based on things that are fixed, not things that you are still working on the details.
+- should i use path and express urlencoded?
+    - middleware is needed to be able to read req.body and interprets it urlencoded is for the language so that it knows 
+    - path is used to show the absolute path to your file, also connected with the question below  
+        - how does the app.get * work?
+            - just copy it, it will be the same for everyone
+
+- how are the pages going to be linked? as long as the functionality is there, does it have to look as 'styled' as it does currently with the JSON file?
+    - yes, use the filter and it should fire off an api request, it goes through the server, is taken from the database, and is sent back all the way to the react app 
+
+- use the params property - fetch how do you submit a query with it? look it up 
+- week 11 and 12 for patterns to look at 
+
+
+
+
+DATABASE
+-what link should i use for .get in apiRoutes?
+- what should i use for MySQL instead of axios
+- how do i use foreign keys to make them work? 
+- why wont my 'not null' work?
+- connection.connect function found within mysql 
+
+
+
+OVERALL QUESTIONS
+
+- don't forget to ask about the overall script-start process
+    - its cool, just copy it, you'll learn about it as you go and use it more 
+
+
+NOTES
+price and products are separated because people that price items dont handle them, and there could be different prices for one product like discounts or othe situations 
+
+- hit MVP first, then take it as far as you need to
