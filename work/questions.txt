@@ -23,6 +23,7 @@ SERVER
 
 DATABASE
 -what link should i use for .get in apiRoutes?
+    - use mysql connection
 - what should i use for MySQL instead of axios
 - how do i use foreign keys to make them work? 
 - why wont my 'not null' work?

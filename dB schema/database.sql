@@ -23,13 +23,13 @@ USE ecommerce;
 
 --PRICES
 CREATE TABLE prices (
+ product_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  price DECIMAL(10,2) NOT NULL,
- monetary_value VARCHAR (10) NOT NULL,
- PRIMARY KEY(price)
+ monetary_value VARCHAR (10) NOT NULL
  );
  
  INSERT INTO prices (price, monetary_value)
- VALUES (14950.00, 'high')
+ VALUES (14950.00, 'high');
 
 
 -- CONTACTS
