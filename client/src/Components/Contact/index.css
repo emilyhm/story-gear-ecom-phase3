@@ -1,0 +1,61 @@
+body {
+    background-color: black;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#title {
+    color: white;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 50px
+}
+
+.box {
+    padding: 20px;
+}
+.submit {
+    text-align: center;
+    background-color: white;
+}
+.comment {
+    padding: 0px;
+}
+.alert {
+    color: red;
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .comment {
+        width: 75%;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .comments {
+        width: 20px;
+        border: 1px solid red;
+    }
+    .form {
+        width: 80%;
+    }
+    form .comment {
+        display: flex;
+        justify-content: center;
+    }
+    
+}

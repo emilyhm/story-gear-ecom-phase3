@@ -1,0 +1,60 @@
+#slogan {
+    color: #990000;
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+    border: 2px solid #990000;
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;   
+}
+#title {
+    color: white;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.hero {
+    height: 70vh;
+    font-family: 'Indie Flower', cursive;
+    font-size: 110px;
+    color: white;
+
+    
+    /*Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    
+    background-image: url(https://static.wixstatic.com/media/feac53_d5774128076746cd96c629fe5eba2c00~mv2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } 
+.img {
+    width: 100px;
+}
+.concept {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    font-size: 30px
+}
+
+@media screen and (max-width: 600px) {
+#title {
+    font-size: 10px;
+    color: red;
+} 
+}
+
+@media screen and (min-width: 800px) {
+    .concept{
+        font-size: 40px;
+    }
+
+}

@@ -16,6 +16,7 @@ SERVER
     - yes, use the filter and it should fire off an api request, it goes through the server, is taken from the database, and is sent back all the way to the react app 
 
 - use the params property - fetch how do you submit a query with it? look it up 
+
 - week 11 and 12 for patterns to look at 
 
 
@@ -26,7 +27,7 @@ DATABASE
     - use mysql connection
 - what should i use for MySQL instead of axios
 - how do i use foreign keys to make them work? 
-- why wont my 'not null' work?
+*** - why wont my 'not null' work?
 - connection.connect function found within mysql 
 
 

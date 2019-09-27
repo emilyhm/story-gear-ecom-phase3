@@ -40,23 +40,27 @@ router.get("/contacts", (req, res) => {
         res.json(data)
     });
 });
-
-// products/type/camera/price/high
+///products/type/:type/price/:price
 router.get("/products/type/:type/price/:price", (req, res) => {
-    var query = "select * from products where 1";
+    console.log(req.url)
+    var query = "SELECT product_name, product_image, product_alt_desc, category, item_description, prices.price FROM products INNER JOIN prices ON products.product_id = prices.product_id WHERE 1"
 
+    let type = req.params.type
+    let price = req.params.price
+    
     //THIS IS SLIGHTLY NOT SECURE- sanatize later
-    if (type !== "all") 
-    {
-        query = query + `AND category = ${type}`;
+    if (type !== "all") {
+        query = query + ` AND category = "${type}"`;
     };
 
-    if (type !== "all")
-    {
-        query = query + `AND monetary_value = ${price}`
+    if (price !== "all") {
+        query = query + ` AND monetary_value = "${price}"`
     };
 
     connection.query(query, function(err, data){
+        if (err) console.log(err)
+        // console.log(query)
+        // console.log(data)
         res.json(data)
     });
 });
