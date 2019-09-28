@@ -17,8 +17,18 @@ class Products extends React.Component {
   category = React.createRef();
   price = React.createRef();
 
-  fetchContent() {
-    const dataURL = 'http://localhost:3001/api/products'
+  fetchContent({type, price}) {
+    let dataURL = 'http://localhost:3001/api/products'
+    if (type) {
+      dataURL += `/type/${type}`
+      // dataURL = dataURL + `/type/${type}`
+      // var number = 1
+      // number += 2
+      // var i; i < length; i++ i +1 
+    }
+    if (price) {
+      dataURL += `/price/${price}`
+    }
     fetch(dataURL)
     .then(res => res.json())
     .then(items => {
@@ -31,13 +41,14 @@ class Products extends React.Component {
 
   componentDidMount() {
     //get function fetch if 
-    this.fetchContent()
+    const {type, price} = this.props.match.params;
+    this.fetchContent({type, price})
   };
 
   componentDidUpdate() {
     // make an if for price and category if they changed in state by comparing using prev.props
     // if (this.state.category !== prev.state.) {
-      this.fetchContent()
+      // this.fetchContent()
     // }
   }
 
@@ -77,13 +88,17 @@ class Products extends React.Component {
       //if productsResults exists, then map through the things and reassign their names so that they can go in their respective spots
       if (productResults !== null) {
         console.log(productResults)
-         mapProducts = productResults.map(prod => {
+
+         mapProducts = productResults.map((
+           {
+             product_name: title,
+             product_image: image,
+             product_alt_desc: alt,
+             item_description: description,
+             price,
+            }) => {
           return <ListProducts 
-                  title={prod.product_name} 
-                  mage={prod.product_image} 
-                  alt={prod.product_alt_desc} 
-                  price={prod.price} 
-                  description={prod.item_description}
+                  product={{title, image, alt, description, price}}
                   />
         });
       }

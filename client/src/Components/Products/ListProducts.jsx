@@ -1,19 +1,19 @@
 import React from 'react';
 
-function ListProducts(props) {
+function ListProducts({product}) {
+  const { title, image, alt, price, description } = product
     return (
     <div>
         <div className="box desktop">
           {/* can use database id as the unique react key */}
           <div className="left">
-            <h2 className="prodTitle">{props.title}</h2>
-            <img className="prodImg" src={props.image} alt={props.alt}/>
-            <p className="price">{props.price}</p>
-            <p className="description">{props.description}</p>
+            <h2 className="prodTitle">{title}</h2>
+            <img className="prodImg" src={image} alt={alt}/>
+            <p className="price">${price}</p>
+            <p className="description">{description}</p>
           </div>
         </div>
     </div>
-    )
-}
+    )};
 
 export default ListProducts;

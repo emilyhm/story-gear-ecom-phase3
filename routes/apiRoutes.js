@@ -47,17 +47,19 @@ router.get("/products/type/:type/price/:price", (req, res) => {
 
     let type = req.params.type
     let price = req.params.price
-    
+    let queryParams = []
     //THIS IS SLIGHTLY NOT SECURE- sanatize later
     if (type !== "all") {
-        query = query + ` AND category = "${type}"`;
+        query = query + ` AND category = ?`;
+        queryParams.push(type)
     };
 
     if (price !== "all") {
-        query = query + ` AND monetary_value = "${price}"`
+        query = query + ` AND monetary_value = ?`
+        queryParams.push(price)
     };
 
-    connection.query(query, function(err, data){
+    connection.query(query, queryParams, function(err, data){
         if (err) console.log(err)
         // console.log(query)
         // console.log(data)
