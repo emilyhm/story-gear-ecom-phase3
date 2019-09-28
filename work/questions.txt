@@ -2,6 +2,8 @@ Q U E S T I O N S
 
 CLIENT 
 
+- why does my data appear when i use http://localhost:3001/api/products and not when i use just /api/products in my dataURL??
+
 
 SERVER
 - how should i structure my tests?

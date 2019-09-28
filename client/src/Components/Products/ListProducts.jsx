@@ -4,6 +4,7 @@ function ListProducts(props) {
     return (
     <div>
         <div className="box desktop">
+          {/* can use database id as the unique react key */}
           <div className="left">
             <h2 className="prodTitle">{props.title}</h2>
             <img className="prodImg" src={props.image} alt={props.alt}/>
