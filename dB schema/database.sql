@@ -66,5 +66,4 @@ CREATE TABLE contacts
  INSERT INTO contacts (first_name, last_name, email, contact_comment)
  VALUES 
  ('Emily', 'Hernandez-Mendez', 'ihopethisworks@gmail.com', 'i really hope this works'),
- ('Andrea', 'Sacks', 'iworkatvogue@vogue.com', 'miranda is hardcore')
- ;
+ ('Andrea', 'Sacks', 'iworkatvogue@vogue.com', 'miranda is hardcore');

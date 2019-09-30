@@ -22,14 +22,14 @@ class App extends React.Component
             <div id="nav">
               <Link id="home" to="/">Home</Link> {' '}
               <Link id="other-links" to='/products' >Products</Link> {' '}
-              <Link id="other-links" to='/Contact'>Say Hello!</Link> {' '}
+              <Link id="other-links" to='/contact-us'>Say Hello!</Link> {' '}
             </div> 
           </div>
             
             <Switch>
               <Route exact path="/" component={Home}/>
-              <Route path="/products/type/:type/price/:price" component={Products}/>
-              <Route path="/contact" component={Contact}/>
+              <Route path="/products" component={Products}/>
+              <Route path="/contact-us" component={Contact}/>
             </Switch>
         </Router>
 

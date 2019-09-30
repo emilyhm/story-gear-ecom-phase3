@@ -2,33 +2,37 @@ import React from 'react';
 // import product from './products.json';
 // import API from "../../utils/API"
 import ListProducts from './ListProducts';
+import {withRouter} from 'react-router-dom';
 import './index.css';
 
 class Products extends React.Component {
   state = {
-      category: "",
+      type: "",
       //category
-      monetary_value: "",
+      price: "",
       //monetary_value
       filteredProducts: [],
       products: null,
     }
 
-  category = React.createRef();
+  type = React.createRef();
   price = React.createRef();
 
-  fetchContent({type, price}) {
-    let dataURL = 'http://localhost:3001/api/products'
+  fetchContent() {
+    const {type, price} = this.state
+    let dataURL = '/api/products'
     if (type) {
       dataURL += `/type/${type}`
       // dataURL = dataURL + `/type/${type}`
-      // var number = 1
-      // number += 2
-      // var i; i < length; i++ i +1 
+    } else {
+      dataURL += `/type/all`
     }
     if (price) {
       dataURL += `/price/${price}`
+    } else {
+      dataURL += `/price/all`
     }
+
     fetch(dataURL)
     .then(res => res.json())
     .then(items => {
@@ -42,10 +46,18 @@ class Products extends React.Component {
   componentDidMount() {
     //get function fetch if 
     const {type, price} = this.props.match.params;
-    this.fetchContent({type, price})
+    this.setState({
+      type: type,
+      price: price
+    })
+    // this.fetchContent()
   };
 
-  componentDidUpdate() {
+  componentDidUpdate(oldProps, oldState) {
+    console.log('componentDidUpdate', this.state, oldState)
+    if (this.state.type !== oldState.type || this.state.price != oldState.price) {
+      this.fetchContent()
+    }
     // make an if for price and category if they changed in state by comparing using prev.props
     // if (this.state.category !== prev.state.) {
       // this.fetchContent()
@@ -55,19 +67,15 @@ class Products extends React.Component {
 
 
   handleProductChange = (e) => {
-    // event.preventDefault();
-    // API.getProducts(this.setState.category)
-    //   .then(res => 
-    //     this.setState({
-    //       category: res.data
-    //       // this.category.current.value
-    //     }))
-    //     .catch(err => console.log(err));
+    this.setState({
+      type: this.type.current.value
+    })
   };
 
   handlePriceChange = (e) => {
+    console.log('price changed')
     this.setState({
-      monetary_value: this.price.current.value
+      price: this.price.current.value
     })
   }
 
@@ -111,9 +119,8 @@ class Products extends React.Component {
           <p id="slogan">Tell Us A Story.</p>
         </div>
 
-
        <form className="filter">
-         <select ref={this.category} onChange= {this.handleProductChange}>
+         <select ref={this.type} onChange= {this.handleProductChange}>
           <option value="all">All Products</option>
           <option value="cameras">Cameras</option>
           <option value="lens">Lens</option>
@@ -142,4 +149,4 @@ class Products extends React.Component {
     
 }
 
-export default Products;
+export default withRouter(Products);
