@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    margin: auto;
 }
 
 form {
@@ -7,13 +8,23 @@ form {
     justify-content: center;
     text-align: center;
 }
-#title {
+div.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+p.comment {
+    font-size: 20px;
+    margin: auto;
+    width: 75%;
+} 
+legend#title {
     color: white;
     font-family: 'Space Mono', monospace;
     text-align: center;
     padding: 10px;
     margin-bottom: 30px;
-    font-size: 50px
+    font-size: 30px
 }
 
 .box {
@@ -23,8 +34,15 @@ form {
     text-align: center;
     background-color: white;
 }
+.style-commentbox {
+    display: flex;
+    flex-direction: column;
+}
 .comment {
     padding: 0px;
+}
+.topic{
+    background-color: white;
 }
 .alert {
     color: red;
@@ -46,6 +64,13 @@ form {
 
 
 @media screen and (min-width: 800px) {
+    fieldset {
+        margin: auto;
+        width: 80%;
+    }
+    p.comment {
+        font-size: 35px;
+    }
     .comments {
         width: 20px;
         border: 1px solid red;
@@ -53,9 +78,12 @@ form {
     .form {
         width: 80%;
     }
-    form .comment {
+    form.comment {
         display: flex;
         justify-content: center;
+    }
+    legend#title {
+        font-size: 50px;
     }
     
 }

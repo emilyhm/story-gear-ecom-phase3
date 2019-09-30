@@ -1,35 +1,39 @@
-#slogan {
+p#slogan {
     color: #990000;
     text-align: center;
     padding: 15px;
     margin: 30px;
     border: 1px solid #990000;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Indie Flower', cursive;
     font-size: 30px;   
 }
 .prodImg {
-    width: 250px;
+    width: 30px;
     display: block;
     margin: auto;
     margin-bottom: 25px;
+}
+
+img.prodImg {
+    width: 100px;
 }
 .prodTitle {
     color: white;
     text-align: center;
     font-family: 'Fascinate', cursive;
-    font-size: 30px;
+    font-size: 20px;
 }
-.price {
+p.price {
     color:#ffcc00;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
-.description {
+p.description {
     color: #a6a6a6;
     text-align: center;
     font-family: 'Darker Grotesque', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 
 }
 .box {
@@ -41,6 +45,9 @@
     display: flex;
     justify-content: center;
     background-color:white;
+}
+.select-type {
+    background-color: white;
 }
 
 /* media queries*/
@@ -69,5 +76,20 @@
     }
     .filter {
         background-color: black;
+    }
+    img.prodImg {
+        width: 250px;
+    }
+    .prodTitle {
+        font-size: 30px;
+    }
+    p.description {
+        font-size: 45px
+    }
+    p.price {
+        font-size: 27px;
+    }
+    p#slogan {
+        font-size: 50px;
     }
 }

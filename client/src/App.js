@@ -15,9 +15,12 @@ class App extends React.Component
         <Router>
           <div className="both">
             <div className="logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Film_strip.svg/1115px-Film_strip.svg.png"
-              width="30" height="30" alt="black and white film strip with brand name"/>
-              <p>Story Gear</p>
+              <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Film_strip.svg/1115px-Film_strip.svg.png" width="30" height="30" alt="black and white film strip with brand name"/>
+              </div>
+              <div>
+                <p>Story Gear</p>
+              </div>
             </div>
             <div id="nav">
               <Link id="home" to="/">Home</Link> {' '}

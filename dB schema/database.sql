@@ -61,9 +61,18 @@ CREATE TABLE contacts
  first_name VARCHAR(100) NOT NULL,
  last_name VARCHAR(100) NOT NULL,
  email VARCHAR(50) NOT NULL,
+ topic VARCHAR(100) NOT NULL,
  contact_comment VARCHAR(10000));
 
- INSERT INTO contacts (first_name, last_name, email, contact_comment)
+ INSERT INTO contacts (first_name, last_name, email, topic, contact_comment)
  VALUES 
- ('Emily', 'Hernandez-Mendez', 'ihopethisworks@gmail.com', 'i really hope this works'),
- ('Andrea', 'Sacks', 'iworkatvogue@vogue.com', 'miranda is hardcore');
+ ('Emily', 'Hernandez-Mendez', 'ihopethisworks@gmail.com', 'general comment', 'i really hope this works'),
+ ('Andrea', 'Sacks', 'iworkatvogue@vogue.com', 'general comment', 'I love the products that are sold here'),
+ ('Harry', 'Potter', 'thechosenone@hogwarts.edu', 'The Brixton by ONA', 'Loved the design. My best friends complemented it, and so did all my other classmates.'),
+ ('Quentin', 'Tarantino', 'qtarantino@gmail.com', 'DSMC2 BRAIN RED DRAGON-X 5K S35', 'Used this for my latest release. Good quality. RED does not disappoint.'),
+ ('Emma', 'Stone', 'estone@gmail.com', 'Travel Tripod by Peak Design', 'Loved this tripod, used it for a summer home video.'),
+ ('Peter', 'McKinnon', 'pmckinnon@gmail.com', 'Aputure AL-MX', 'One of the best small lights for any photographer or filmmaker. For emergencies, or if you need a small light this is the best pick.'),
+ ('Leo', 'DiCaprio', 'dicaprio@gmail.com', 'EF 35mm f/1.4L USM', 'Bought this for a friend. He loved it. Great packaging. Would recommend'),
+ ('Brad', 'Pitt', 'bpitt@hotmail.com', 'GNARBOX 2.0 SSD (1 TB)', 'Bought this for a small project, held all my footage and it was amazing.'),
+ ('John', 'Wick', 'jwick@gmail.com', 'Canon EOS 1D Mark IV (Used)', 'Got this so that I could take videos of my dog. They came out so good. 10/10'),
+ ('Jules', 'Winnfield', 'jules@pulpfiction.com', 'Waterproof Waxed Canvas Bag by Woosir', 'I used this for a gig I got a while back, and I have to say, it carried all my equipment exceptionally well.');
