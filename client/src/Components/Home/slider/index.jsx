@@ -17,7 +17,7 @@ class Fade extends React.Component {
     };
     return (
       <div>
-        <Slider {...settings}>
+        <Slider className="slider" {...settings}>
           <div>
             <img className="prodImg" src="https://www.red.com/SSP%20Applications/Red@SuiteCentric/SCA%20Kilimanjaro/img/products/710-0317_0.png?resizeid=5&resizeh=1200&resizew=1200" alt="black camera body"/>
           </div>

@@ -1,6 +1,11 @@
-.prodImg {
-    width: 250px;
+/* .prodImg {
+    width: 500px;
     display: block;
     margin: auto;
     margin-bottom: 25px;
+} */
+.slider {
+    width: 50%;
+    margin:auto;
 }
+

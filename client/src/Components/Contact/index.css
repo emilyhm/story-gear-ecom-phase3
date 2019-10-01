@@ -8,11 +8,6 @@ form {
     justify-content: center;
     text-align: center;
 }
-div.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 p.comment {
     font-size: 20px;
     margin: auto;
@@ -48,6 +43,7 @@ legend#title {
     color: red;
 
 }
+
 
 
 

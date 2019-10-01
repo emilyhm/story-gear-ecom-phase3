@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import Fade from "./slider/index";
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 class Home extends React.Component {
     render() {
@@ -16,13 +17,15 @@ class Home extends React.Component {
               </section>
           
              <div className="concept">
-                <p>Express your ideas with the best products out there. Tell the world what goes on in your head. </p>
                 <p>Picture a story.</p> 
                 <p>Capture it.</p> 
-                <p>Do it again. Do it better.</p>
+                <p>Do it again.</p>
+                <p>Do it better.</p>
               </div> 
 
             <Fade />
+
+            <Link id="reviews" to='/reviews'>View Reviews!</Link>
 
             </div>
         )

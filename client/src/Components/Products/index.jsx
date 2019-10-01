@@ -6,9 +6,9 @@ import './index.css';
 
 class Products extends React.Component {
   state = {
-      //category in MySQL
+      //"category" in MySQL
       type: "",
-      //monetary_value in MySQL
+      //"monetary_value" in MySQL
       price: "",
       products: null,
     }
@@ -41,8 +41,10 @@ class Products extends React.Component {
   };
 
   componentDidMount() {
+    //how does this work if it isnt using fetchContent?
     //get function fetch if 
     const {type, price} = this.props.match.params;
+    console.log(this.props.match.params)
     this.setState({
       type: type,
       price: price
@@ -58,8 +60,6 @@ class Products extends React.Component {
     };
   };
 
-
-
   handleProductChange = (e) => {
     this.setState({
       type: this.type.current.value
@@ -71,7 +71,6 @@ class Products extends React.Component {
       price: this.price.current.value
     });
   };
-
 
   render() {
       const productResults = this.state.products
@@ -99,11 +98,21 @@ class Products extends React.Component {
             });
       };
 
+      this.presentation = () => {  
+      if (productResults == null) {
+        return <p>"Please wait, the page is loading"</p>
+      }
+      if (productResults !== null) {
+        return productResults && mapProducts
+      }};
+
+      
+
     return (
       <div className="main"> 
        <div className="desktop">
           <p id="slogan">Tell Us A Story.</p>
-        </div>
+       </div>
 
        <form className="filter">
          <select className="select" ref={this.type} onChange= {this.handleProductChange}>
@@ -122,12 +131,18 @@ class Products extends React.Component {
           <option value="high">High (1000+ USD)</option>
         </select>
        </form>
-    
-      {productResults && mapProducts}
 
-      {productResults == null && 
+
+      
+      {this.presentation()}
+    
+
+      {/* {productResults == null && 
         <p>"Please wait, the page is loading"</p>
       }
+
+      {productResults && mapProducts} */}
+      
       </div>
       
     );

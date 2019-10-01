@@ -5,6 +5,7 @@ import Products from './Components/Products/index';
 import Home from './Components/Home/index';
 import Contact from './Components/Contact/index';
 import Footer from "./Components/Footer/index";
+import Reviews from "./Components/reviews/reviews"
 
 class App extends React.Component 
 {
@@ -33,6 +34,7 @@ class App extends React.Component
               <Route exact path="/" component={Home}/>
               <Route path="/products" component={Products}/>
               <Route path="/contact-us" component={Contact}/>
+              <Route path="/reviews" component={Reviews} />
             </Switch>
         </Router>
 

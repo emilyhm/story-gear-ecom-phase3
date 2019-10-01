@@ -2,8 +2,8 @@ import React from 'react';
 import './index.css';
 import Form from "./form/form";
 
-class Contact extends React.Component 
-{
+class Contact extends React.Component {
+
     render() 
     {
         return (
