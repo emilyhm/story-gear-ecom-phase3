@@ -7,7 +7,7 @@ These instructions can be used to run the project locally for development and te
 2. npm start
 
 ### Prerequisies
-No additional instillation should be required. However, a possible list of prerequisites can be found below. Simply ‘cd’ into the respective directories and run ‘npm install - - save (program)’
+No additional instillation should be required. However, a possible list of prerequisites can be found below. Simply ‘cd’ into the respective directories and run ‘npm install -- save (program)’
 
 story-gear-ecommerce/package.json
 - express
