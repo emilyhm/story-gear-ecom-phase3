@@ -11,6 +11,7 @@ No additional instillation should be required. However, a possible list of prere
 
 story-gear-ecommerce/package.json
 - express
+- mysql
 - concurrently 
 - if-env
 - helmet 
@@ -28,4 +29,8 @@ story-gear-ecommerce/client/package.json
 
 ## Running the tests
 Go to the root of the project, and run ‘npm test’ in your terminal. This will run the available tests for this project. 
+
+## Database
+MySql is used as a database server in order to display the products available on the Story Gear website. The code used to create the tables and insert the values can be found under the 'dB schema' directory. Copy the information and paste it into MySql Workbench. 
+More information, including how to download Workbench can be found here: https://www.mysql.com/products/workbench/
 
