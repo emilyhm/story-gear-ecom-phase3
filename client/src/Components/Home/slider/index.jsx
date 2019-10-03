@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-
 class Fade extends React.Component {
   render() {
     const settings = {
@@ -39,10 +38,7 @@ class Fade extends React.Component {
         </Slider>
       </div>
     );
-  }
-}
-
-
-
+  };
+};
 
 export default Fade

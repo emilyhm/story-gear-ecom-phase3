@@ -1,28 +1,28 @@
 import React from 'react';
 import useForm from 'react-hook-form';
 
-
 const Form = () => {
-  
   const { register, handleSubmit, errors } = useForm()
-
   const onSubmit = data => {console.log(data)}
   
   return(
     <form className="form-style" noValidate action="#" method="POST" name="contact_us" onSubmit = {handleSubmit(onSubmit)}>
       <div className="form-fieldset">
         <fieldset>
+          {/* shows the title and directions for the user/client to follow */}
           <legend id="title">Say Hello!</legend>
           <p className="comment">Give us feedback, or just say hello. Send us a message and we'll be glad to see it. Or just drop your email!</p>
+
+          {/* shows the 'full name' part of the form */}
           <div className="box">
             <label htmlFor="fullName">Full Name: </label> 
             <br />
             <input id="fullName" type="text" name="fullName" required ref={register({ required: true })}/>
             <br />
             {errors.fullName && errors.fullName.type === 'required' && <span className="alert">Please Enter Your Full Name!</span>}
-            
           </div>
           
+          {/* the email part of the form */}
           <div className="box">
             <label htmlFor="email">Email: </label>
             <br />
@@ -31,6 +31,7 @@ const Form = () => {
             {errors.email && errors.email.type === 'required' && <span className="alert">Please Enter Your Email!</span>}
           </div>
 
+          {/* dropdown that can help the user specify what they want to comment on */}
           <div className="box">
             <select className="topic">
               <option value="pick-a-topic">What is the topic of your comment?</option>
@@ -51,21 +52,18 @@ const Form = () => {
             </select>
           </div>
 
-        
-
+          {/* the comment portion of the form */}
           <div className="box comment style-commentbox">
-
             <div>
-            <label htmlFor="response">Anything you want to tell us?</label> 
+              <label htmlFor="response">Anything you want to tell us?</label> 
             </div>
-
             <br />
-            
             <div>
-            <textarea id="response" name="comments" rows="10" cols="30"></textarea>
+              <textarea id="response" name="comments" rows="10" cols="30"></textarea>
             </div>
           </div>
 
+          {/* submit button */}
           <div className="submit">
             <button type="submit">Submit</button>
           </div>
@@ -73,14 +71,7 @@ const Form = () => {
         </fieldset> 
       </div>
     </form>
-  
-  
-  
-  
-  )
-}
-
-
-
+  );
+};
 
 export default Form 

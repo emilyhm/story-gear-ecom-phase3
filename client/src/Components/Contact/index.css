@@ -64,6 +64,11 @@ legend#title {
         margin: auto;
         width: 80%;
     }
+    div.submit{
+        width: 10%;
+        background-color: white;
+        margin: auto;
+    }
     p.comment {
         font-size: 35px;
     }

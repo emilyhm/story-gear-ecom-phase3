@@ -13,7 +13,6 @@ p#slogan {
     margin: auto;
     margin-bottom: 25px;
 }
-
 img.prodImg {
     width: 100px;
 }
@@ -34,7 +33,6 @@ p.description {
     text-align: center;
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 20px;
-
 }
 .box {
     border: 1px solid #990000;
@@ -50,9 +48,7 @@ p.description {
     background-color: white;
 }
 
-/* media queries*/
-/* desktop */
-
+/* media queries for lap/desk top*/
 @media screen and (min-width: 800px) {
     #slogan {
         width: 70%;
@@ -64,7 +60,6 @@ p.description {
     .desktop{
         display: flex;
         justify-content: space-around;
-        /* clear: both; */
         padding: 10px;
         align-content: center;
         border-color: grey; 
@@ -75,7 +70,9 @@ p.description {
         padding: 30px;
     }
     .filter {
-        background-color: black;
+        background-color: white;
+        width: 25%;
+        margin: auto;
     }
     img.prodImg {
         width: 250px;

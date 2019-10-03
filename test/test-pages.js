@@ -2,14 +2,12 @@ var expect = require('chai').expect;
 var request = require('request');
 
 describe('testing react app', function(){
-
     it('renders the home page', function(done){
-        request('http://localhost:3000', function(err, res, body){
+        request('http://localhost:3000/', function(err, res, body){
             expect(body).to.not.equal('null');
             done();
         });
     });
-    //expect body to be a ??
 
     it('renders the products page', function(done){
         request('http://localhost:3000/products', function(err, res, body){
@@ -31,12 +29,14 @@ describe('testing react app', function(){
             done();
         });
     });
+
+    it('displays the reviews page', function(done){
+        request('http://localhost:3000/reviews', function(err, res, body){
+            expect(body).to.not.equal('null');
+            done();
+        });
+    });
 });
-
-
-
-
-
 
 describe('testing apis', function(){
     it('sends all the products', function(done) {
@@ -54,11 +54,17 @@ describe('testing apis', function(){
         });
     });
     
+    it('example: sends lens, high price', function(done) {
+        request('http://localhost:3001/api/products/type/lens/price/high', function(err, res, body) {
+            expect(res.statusCode).to.equal(200)
+            done();
+        });
+    });
     it('sends all contacts', function(done) {
         request('http://localhost:3001/api/contacts', function(err, res, body) {
             expect(res.statusCode).to.equal(200)
             done();
-        })
+        });
     });
 });
 

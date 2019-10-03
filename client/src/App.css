@@ -2,23 +2,18 @@
 * {
   box-sizing: border-box;
 }
-
 a:link {
   color: white;
 }
-
 a:visited {
   color:white;
 }
-
 a:hover {
   color: #990000;
 }
-
 a:active {
   color: black;
 }
-
 .logo {
   font-size: 20px;
   display: flex;
@@ -31,10 +26,8 @@ a:active {
   border-radius: 50px;
 }
 .logo img {
-  /* margin-right: 5px;
-  margin-top: 5px; */
-  height: 20px;
   width: 20px;
+  height: 20px;
   display: inline;
 }
 .logo p {
@@ -44,7 +37,6 @@ a:active {
   display: flex;
   text-align: center;
 }
-
 div.both {
   background-color: #990000;
   height: 75px;
@@ -52,7 +44,6 @@ div.both {
   border-radius: 10px; 
   width: 100%;
 }
-
 #nav {
   display: flex;
   justify-content: flex-end;
@@ -66,43 +57,29 @@ div.both {
   margin-left: 5px;
   margin-right: 5px;
 }
-
 body {
   background-color: black;
   color: white;
   font-family: 'Quicksand', sans-serif;
 }
-
 .main {
   margin: auto;
   margin-top: 3%;
 }
-
 h1#title {
   color: white;
   font-family: 'Space Mono', monospace;
   font-size: 30px;
 }
-
 h1 {
   text-align: center;
   font-family: 'Space Mono', monospace;
   font-size: 20px;
   font-size: 30px
 }
-
-/* .footer #logo {
-  color: white;
-  font-family: 'Indie Flower', cursive;
-  font-size: 20px
-} */
-
 .footer {
   background-color: #990000;
   width: 100%;
-  /* position: relative; */
-  /* top: 70px;
-  bottom: 0px; */
   border: 2px solid brown;
   display: flex;
   justify-content: space-evenly;
@@ -112,27 +89,20 @@ h1 {
 .footer p {
   font-size: 13px;
 }
-
 .copyright {
   font-family: 'Quicksand', sans-serif;
-  /* display: flex;
-  justify-content: center; */
   color: white;
-  /* background-color: blue; */
 }
-
 div.social {
   display: flex;
   justify-content: space-around;
   align-content: center;
 }
-
 div.social li {
   display: flex;
   font-family: 'Quicksand', sans-serif;
   margin-right: 15px;
 }
-
 .fab {
   color: white;
 }
@@ -173,19 +143,9 @@ div.social li {
     display: flex;
     flex-direction: row;
   }
-  /* h1 {
-    text-align: center;
-    padding: 10px;
-    margin: 50px;
-    font-family: 'Space Mono', monospace;
-    font-family: 50px;
-  } */
   .footer {
     background-color: #990000;
     width: 100%;
-    /* position: relative; */
-    /* top: 70px;
-    bottom: 0px; */
     border: 2px solid brown;
     display: flex;
     justify-content: space-evenly;
