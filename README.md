@@ -4,10 +4,10 @@ An eCommerce site that sells camera gear. Welcome to Story Gear! Tell us a story
 ## Getting Started
 These instructions can be used to run the project locally for development and testing. 
 1. Open your terminal and go to the root of the project
-2. npm start
+2. Run 'npm start'
 
 ### Prerequisies
-No additional instillation should be required. However, a possible list of prerequisites can be found below. Simply ‘cd’ into the respective directories and run ‘npm install -- save (program)’
+No additional instillation should be required. However, a possible list of prerequisites can be found below. Simply ‘cd’ into the respective directories and run ‘npm install -- save (prerequisite)’
 
 story-gear-ecommerce/package.json
 - express
