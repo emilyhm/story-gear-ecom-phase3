@@ -49,7 +49,7 @@ class Products extends React.Component {
   componentDidMount() {
     //how does this work if it isnt using fetchContent?
     const {type, price} = this.props.match.params;
-    console.log(this.props.match.params)
+    // console.log(this.props.match.params)
     this.setState({
       type: type,
       price: price

@@ -1,5 +1,3 @@
-//////////////////////////////////////////////UNCOMMENT THIS WHEN YOU FIGURE OUT HOW TO FIX IT //////////////////////////////////////////////////////////////////////////////
-
 const router = require("express").Router();
 //.Router helps to breakdown the API routes
 const mysql = require('mysql');
